@@ -1,0 +1,31 @@
+id,text,label,username,date
+1,"$BTC to the moon! Best investment I have ever made #Bitcoin #Crypto",positive,@cryptobull,2024-01-15
+2,"Just lost everything on this crypto dip. Worst day ever #rekt",negative,@sadtrader,2024-01-15
+3,"Watching $ETH charts all day. Nothing interesting happening tbh",neutral,@chartwatch,2024-01-16
+4,"Bitcoin is going to change the world! Financial freedom is coming!",positive,@hodler4life,2024-01-16
+5,"Another crypto project rug pulled. This space is full of scammers",negative,@cryptoskeptic,2024-01-17
+6,"$BTC price action looking interesting. Could go either way here",neutral,@techanalyst,2024-01-17
+7,"Just bought the dip! $ETH $BTC $SOL loading up at these prices!",positive,@dipbuyer,2024-01-18
+8,"Crypto regulations are killing innovation. Governments do not understand",negative,@libertycrypto,2024-01-18
+9,"Staking rewards came in today. Passive income is great #DeFi",positive,@staker99,2024-01-19
+10,"When will this bear market end? Portfolio down 80% from ATH",negative,@bearmarket_pain,2024-01-19
+11,"Market looking sideways today. Accumulation phase perhaps?",neutral,@patient_hodler,2024-01-20
+12,"$SOL ecosystem is absolutely booming right now! So many great projects",positive,@solanamaxxi,2024-01-20
+13,"Another day another crypto hack. Not your keys not your coins",negative,@securityfirst,2024-01-21
+14,"Gas fees finally reasonable on Ethereum. L2s are working!",positive,@l2believer,2024-01-21
+15,"Crypto market cap just sitting there. Range bound trading continues",neutral,@rangetrader,2024-01-22
+16,"My crypto portfolio is finally green again after 18 months!",positive,@comeback_kid,2024-01-22
+17,"Lost faith in this market. Selling everything and going to cash",negative,@exitliquidity,2024-01-23
+18,"Interesting on chain data today. Whales accumulating quietly",neutral,@onchaindata,2024-01-23
+19,"DeFi summer vibes are back! Yields are insane right now #DeFi",positive,@defi_degen,2024-01-24
+20,"Another promising project turned out to be a scam. Do your research",negative,@duyor_always,2024-01-24
+21,"Bitcoin halving in a few months. History suggests good things ahead",positive,@halvingwatcher,2024-01-25
+22,"Crypto taxes are an absolute nightmare. Every trade is taxable",negative,@taxhater,2024-01-25
+23,"Volume looks low today. Market participants seem hesitant",neutral,@volumewatcher,2024-01-26
+24,"NFT collection I minted is finally getting some traction!",positive,@nftcreator,2024-01-26
+25,"Stablecoin depegged again. Trust issues in crypto are real",negative,@stablecoindoubt,2024-01-27
+26,"Weekend crypto trading is so quiet. Waiting for Monday",neutral,@weekendtrader,2024-01-27
+27,"Bitcoin ETF is a game changer for mass adoption! Very bullish",positive,@etfbull,2024-01-28
+28,"Crypto influencers all shilling garbage projects for money",negative,@influencer_hate,2024-01-28
+29,"Market correlation with equities still too high for my liking",neutral,@macrowatcher,2024-01-29
+30,"Just hit my first 100k in crypto! Years of patience paid off",positive,@milestone_maker,2024-01-29

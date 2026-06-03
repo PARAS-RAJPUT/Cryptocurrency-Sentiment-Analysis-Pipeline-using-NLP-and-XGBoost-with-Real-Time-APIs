@@ -1,0 +1,14 @@
+.card{padding:24px}
+.header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.left{flex:1;min-width:0}
+.text{margin-top:10px;color:var(--muted);font-style:italic;font-size:14px;line-height:1.5}
+.score{min-width:84px;display:flex;flex-direction:column;align-items:center;padding:12px;border-radius:10px;flex-shrink:0;text-align:center}
+.scoreNum{font-family:var(--font-head);font-size:34px;font-weight:800;line-height:1}
+.scoreSub{font-size:11px;opacity:.6;margin-top:2px}
+.scoreTag{font-size:10px;opacity:.7;margin-top:5px}
+.bars{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.barRow{display:grid;grid-template-columns:76px 1fr 44px;align-items:center;gap:10px}
+.barLabel{font-size:12px;color:var(--muted);font-weight:500}
+.track{height:5px;background:var(--bg3);border-radius:999px;overflow:hidden}
+.fill{height:100%;border-radius:999px;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.pct{font-size:12px;color:var(--text);font-weight:600;text-align:right}

@@ -1,0 +1,15 @@
+.page{max-width:1200px;margin:0 auto;padding:48px 24px}
+.hero{margin-bottom:36px}
+.title{font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;margin-bottom:8px}
+.sub{color:var(--muted);font-size:16px}
+.error{background:var(--neg-dim);border:1px solid var(--neg);color:var(--neg);padding:12px 18px;border-radius:var(--radius-sm);font-size:14px;margin-bottom:24px}
+.kpiRow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:900px){.kpiRow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kpiRow{grid-template-columns:1fr}}
+.charts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.charts{grid-template-columns:1fr}}
+.feedList{display:flex;flex-direction:column;gap:2px}
+.feedRow{display:grid;grid-template-columns:96px 1fr 48px;align-items:center;gap:14px;padding:10px 8px;border-radius:8px;transition:background .15s}
+.feedRow:hover{background:var(--bg3)}
+.feedText{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.feedScore{font-size:12px;font-weight:600;color:var(--muted);text-align:right}

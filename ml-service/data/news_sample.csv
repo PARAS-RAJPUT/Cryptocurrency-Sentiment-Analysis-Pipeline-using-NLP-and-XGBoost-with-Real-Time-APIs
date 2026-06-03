@@ -1,0 +1,21 @@
+id,title,description,label,source,date
+1,"Bitcoin ETF Approval Sparks Rally","SEC approves first Bitcoin spot ETF sending prices surging 15%",positive,CoinDesk,2024-01-10
+2,"Crypto Exchange Files for Bankruptcy","Major exchange unable to meet withdrawal demands files Chapter 11",negative,Bloomberg,2024-01-11
+3,"Ethereum Gas Fees Hit Monthly Average","Transaction costs on Ethereum remain at typical levels this week",neutral,CryptoNews,2024-01-12
+4,"Solana DeFi Ecosystem Reaches New High","Total value locked on Solana surpasses previous record",positive,Decrypt,2024-01-13
+5,"Tether Audit Raises Questions","Stablecoin issuer quarterly report scrutinized by analysts",negative,Reuters,2024-01-14
+6,"Bitcoin Mining Difficulty Adjusts","Network adjusts mining difficulty following hashrate fluctuation",neutral,CoinTelegraph,2024-01-15
+7,"Polygon Announces Major Protocol Upgrade","Layer 2 network launches 2.0 upgrade promising improved performance",positive,TheBlock,2024-01-16
+8,"Crypto Hedge Fund Liquidates Holdings","Institutional fund exits crypto positions citing market uncertainty",negative,FT,2024-01-17
+9,"NFT Sales Volume Stays Consistent","Weekly NFT trading volumes hold steady across major platforms",neutral,NFTNews,2024-01-18
+10,"Chainlink Integrations Hit New Record","Oracle network surpasses 1000 active integrations milestone",positive,CoinDesk,2024-01-19
+11,"Crypto Lending Rates Decline","Yields on crypto lending platforms fall as demand softens",negative,Bloomberg,2024-01-20
+12,"Stablecoin Market Cap Holds Steady","Combined market cap of major stablecoins shows minimal change",neutral,CryptoNews,2024-01-21
+13,"Avalanche Partnership Expands Ecosystem","New enterprise partnerships announced for Avalanche blockchain",positive,Decrypt,2024-01-22
+14,"Wash Trading Allegations Hit Exchange","Popular exchange accused of inflating trading volumes artificially",negative,Reuters,2024-01-23
+15,"BTC Dominance Maintains Current Level","Bitcoin market dominance percentage shows little change week over week",neutral,CoinTelegraph,2024-01-24
+16,"Cardano Smart Contract Usage Grows","Developer activity and dApp usage increasing on Cardano network",positive,TheBlock,2024-01-25
+17,"Crypto VC Funding Drops Sharply","Venture capital investment in crypto startups falls 60% year on year",negative,FT,2024-01-26
+18,"Layer 1 Blockchain Metrics Hold","Performance metrics across major layer 1 blockchains remain stable",neutral,CoinDesk,2024-01-27
+19,"Polkadot Parachain Auctions Resume","New parachain slot auctions attract strong bidding from projects",positive,Bloomberg,2024-01-28
+20,"Celsius Creditors Face Long Wait","Bankruptcy proceedings for Celsius Network could take years to resolve",negative,CryptoNews,2024-01-29

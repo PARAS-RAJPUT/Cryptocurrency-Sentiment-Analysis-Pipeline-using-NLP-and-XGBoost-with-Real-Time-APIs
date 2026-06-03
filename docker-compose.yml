@@ -1,0 +1,122 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────
+#  CryptoSentiment — Docker Pipeline
+#
+#  Services:
+#    ml       Python Flask  :5001  (NLP + XGBoost)
+#    backend  Node Express  :4000  (REST API + MongoDB proxy)
+#    mongo    MongoDB       :27017 (prediction history)
+#    frontend Nginx/React   :80    (public UI)
+#
+#  Network:  crypto-net  (internal bridge)
+#  Volumes:  ml-models   (persists .pkl artifacts)
+#            mongo-data  (persists MongoDB)
+# ─────────────────────────────────────────────────────────────
+
+services:
+
+  # ── 1. Python ML / Flask ──────────────────────────────────
+  ml:
+    build:
+      context: ./ml-service
+      dockerfile: Dockerfile
+    container_name: crypto-ml
+    restart: unless-stopped
+    volumes:
+      - ml-models:/app/models
+      - ./outputs:/outputs
+    networks:
+      - crypto-net
+    expose:
+      - "5001"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN:-}
+      - NEWS_API_KEY=${NEWS_API_KEY:-}
+    healthcheck:
+      test: ["CMD","python","-c","import urllib.request; urllib.request.urlopen('http://localhost:5001/health')"]
+      interval: 20s
+      timeout: 10s
+      start_period: 90s
+      retries: 5
+
+  # ── 2. MongoDB ────────────────────────────────────────────
+  mongo:
+    image: mongo:7
+    container_name: crypto-mongo
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - crypto-net
+    expose:
+      - "27017"
+    healthcheck:
+      test: ["CMD","mongosh","--eval","db.adminCommand('ping')"]
+      interval: 15s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+  # ── 3. Node / Express ─────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: crypto-backend
+    restart: unless-stopped
+    networks:
+      - crypto-net
+    expose:
+      - "4000"
+    environment:
+      - PORT=4000
+      - ML_URL=http://ml:5001
+      - MONGO_URI=mongodb://mongo:27017/cryptosentiment
+      - NODE_ENV=production
+    depends_on:
+      ml:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD","wget","-qO-","http://localhost:4000/api/health"]
+      interval: 15s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+  # ── 4. React / Nginx ──────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: crypto-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    networks:
+      - crypto-net
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD","wget","-qO-","http://localhost:80"]
+      interval: 15s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+# ─────────────────────────────────────────────────────────────
+
+volumes:
+  ml-models:
+    name: cryptosentiment-models
+  mongo-data:
+    name: cryptosentiment-mongo
+
+networks:
+  crypto-net:
+    driver: bridge
+    name: cryptosentiment-net

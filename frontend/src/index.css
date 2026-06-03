@@ -1,0 +1,40 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09090e;--bg2:#111119;--bg3:#1a1a24;--bg4:#22222e;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
+  --text:#e8e8f0;--muted:#7a7a9a;
+  --pos:#22d98a;--pos-dim:rgba(34,217,138,0.12);
+  --neg:#ff4f6d;--neg-dim:rgba(255,79,109,0.12);
+  --neu:#7b91ff;--neu-dim:rgba(123,145,255,0.12);
+  --accent:#a78bfa;--accent-dim:rgba(167,139,250,0.15);
+  --gold:#f59e0b;
+  --radius:12px;--radius-sm:8px;
+  --font-head:"Syne",sans-serif;--font-body:"DM Sans",sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;min-height:100vh}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.2}
+a{color:inherit;text-decoration:none}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:3px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.card-sm{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.badge-pos{background:var(--pos-dim);color:var(--pos)}
+.badge-neg{background:var(--neg-dim);color:var(--neg)}
+.badge-neu{background:var(--neu-dim);color:var(--neu)}
+.label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+button{cursor:pointer;border:none;font-family:var(--font-body);transition:opacity .15s,transform .15s}
+button:hover{opacity:.85}
+button:active{transform:scale(.97)}
+input,textarea,select{font-family:var(--font-body);font-size:15px;background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:var(--radius-sm);outline:none;transition:border-color .2s}
+input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+.btn-primary{background:var(--accent);color:#fff;padding:10px 22px;border-radius:var(--radius-sm);font-weight:600;font-size:14px;font-family:var(--font-head)}
+.btn-primary:disabled{opacity:.4;cursor:not-allowed}
+.btn-ghost{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:8px 16px;border-radius:var(--radius-sm);font-size:13px;font-weight:500}
+.divider{border:none;border-top:1px solid var(--border);margin:20px 0}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .35s ease both}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.pulsing{animation:pulse 1.4s ease infinite}
