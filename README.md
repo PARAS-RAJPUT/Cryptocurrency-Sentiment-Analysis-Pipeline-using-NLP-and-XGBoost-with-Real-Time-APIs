@@ -1,4 +1,4 @@
-# CryptoSentiment — Full-Stack NLP Pipeline
+# CryptoSentiment — NLP Pipeline With MERN
 
 End-to-end crypto sentiment analysis: **Python XGBoost NLP → Flask API → Node/Express → MongoDB → React Dashboard**, all containerised with Docker.
 
